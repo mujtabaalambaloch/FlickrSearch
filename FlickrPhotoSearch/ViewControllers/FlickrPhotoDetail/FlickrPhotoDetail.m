@@ -23,6 +23,8 @@
 
 @implementation FlickrPhotoDetail
 
+#pragma mark - View Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.photoModel.title;
@@ -59,6 +61,8 @@
     
     [self centerScrollViewContents];
 }
+
+#pragma mark - Scroll View 
 
 - (void)centerScrollViewContents {
     CGSize boundsSize = self.scrollView.bounds.size;
@@ -111,6 +115,5 @@
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
     [self centerScrollViewContents];
 }
-
 
 @end

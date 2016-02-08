@@ -31,15 +31,6 @@
     [self callWebService];
 }
 
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
 #pragma mark - Custom Methods
 
 - (void)callWebService {
@@ -94,16 +85,6 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.searchTextfield resignFirstResponder];
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
     
     self.page = 1;
     [self setupArray];

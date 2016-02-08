@@ -17,6 +17,8 @@
 
 @synthesize photosArray;
 
+#pragma mark - Setup Photos Array
+
 - (void)setupArray {
     self.photosArray = [[NSMutableArray alloc] init];
 }
@@ -85,6 +87,7 @@
     }];
 }
 
+#pragma mark - MBProgressHUD Show/Hide
 
 - (void)showLoadingIndicator {
     [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
@@ -93,6 +96,8 @@
 - (void)hideLoadingIndicator {
     [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
 }
+
+#pragma mark - Image Validation
 
 - (UIImage *)validationImage:(NSIndexPath *)indexPath {
     
@@ -106,6 +111,5 @@
         return image;
     }
 }
-
 
 @end
